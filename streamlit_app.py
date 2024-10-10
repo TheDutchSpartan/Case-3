@@ -648,7 +648,7 @@ elif blog_post == 'Voorspellingsmodel voor vertraging':
 
 elif blog_post == 'Vertraging in de wereld':
     st.header('Vertraging in de wereld')
-    st.write('Met behulp van deze Python-code kun je eenvoudig een interactieve kaart genereren die de gemiddelde vertragingen op luchthavens over de hele wereld visualiseert. Hieronder bespreek ik hoe de code werkt en wat je als gebruiker ermee kunt doen.Wat kun jij ermee doen?')
+    st.write('Met behulp van deze Python-code kun je eenvoudig een interactieve kaart genereren die de gemiddelde vertragingen op luchthavens over de hele wereld visualiseert. Hieronder bespreek ik wat je als gebruiker ermee kunt doen.')
     import pandas as pd
     import numpy as np
     import matplotlib.pyplot as plt
@@ -804,7 +804,7 @@ elif blog_post == 'Vertraging in de wereld':
             return 'red'  # Hoge vertraging
 
     # Maak de hoofdkaart gecentreerd op Europa
-    m = folium.Map(location=(52.308056, 4.764167), zoom_start=2)
+    m = folium.Map(location=(52.308056, 4.764167), zoom_start=1)
 
     # Unieke continenten uit de DataFrame ophalen
     continents = df_avg_delay['Continent'].unique()
