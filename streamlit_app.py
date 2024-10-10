@@ -50,7 +50,7 @@ elif blog_post == 'Drukte voor vluchten op verschillende luchthavens':
     import plotly.express as px
 
     airports_extended_clean = pd.read_csv('Data/airports-extended-clean.csv', sep =";")
-    schedule_airports = pd.read_csv('Data/schedule_airport.csv')
+    schedule_airports = pd.read_csv('Data/schedule_airport.zip')
 
     df_merged = schedule_airports.merge(airports_extended_clean, left_on='Org/Des', right_on='ICAO', how='inner')
     df_merged = df_merged.replace('-', np.nan)
