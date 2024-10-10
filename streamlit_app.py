@@ -225,8 +225,8 @@ elif blog_post == 'Informatie over vertraging':
     import streamlit as st
     from datetime import datetime
 
-    airports_extended_clean = pd.read_csv('airports-extended-clean.csv', sep =";")
-    schedule_airports = pd.read_csv('schedule_airport.csv')
+    airports_extended_clean = pd.read_csv('Data/airports-extended-clean.csv', sep =";")
+    schedule_airports = pd.read_csv('Data/schedule_airport.zip')
 
     df_merged = schedule_airports.merge(airports_extended_clean, left_on='Org/Des', right_on='ICAO', how='inner')
     df_merged= df_merged.replace('-', np.nan)
@@ -415,8 +415,8 @@ elif blog_post == 'Voorspellingsmodel voor vertraging':
     from sklearn.tree import DecisionTreeRegressor
 
     # Data inladen
-    airports_extended_clean = pd.read_csv('airports-extended-clean.csv', sep=";")
-    schedule_airports = pd.read_csv('schedule_airport.csv')
+    airports_extended_clean = pd.read_csv('Data/airports-extended-clean.csv', sep=";")
+    schedule_airports = pd.read_csv('Data/schedule_airport.zip')
 
     # Data samenvoegen
     df_merged = schedule_airports.merge(airports_extended_clean, left_on='Org/Des', right_on='ICAO', how='inner')
@@ -654,8 +654,8 @@ elif blog_post == 'Vertraging in de wereld':
     import matplotlib.pyplot as plt
     import plotly.express as px
     from streamlit.components.v1 import html
-    airports_extended_clean = pd.read_csv('airports-extended-clean.csv', sep =";")
-    schedule_airports = pd.read_csv('schedule_airport.csv')
+    airports_extended_clean = pd.read_csv('Data/airports-extended-clean.csv', sep =";")
+    schedule_airports = pd.read_csv('Data/schedule_airport.zip')
 
     df_merged = schedule_airports.merge(airports_extended_clean, left_on='Org/Des', right_on='ICAO', how='inner')
     df_merged= df_merged.replace('-', np.nan)
