@@ -804,7 +804,7 @@ elif blog_post == 'Vertraging in de wereld':
             return 'red'  # Hoge vertraging
 
     # Maak de hoofdkaart gecentreerd op Europa
-    m = folium.Map(location=(52.308056, 4.764167), zoom_start=3)
+    m = folium.Map(location=(52.308056, 4.764167), zoom_start=2)
 
     # Unieke continenten uit de DataFrame ophalen
     continents = df_avg_delay['Continent'].unique()
